@@ -1,23 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
 
-*{
+* {
     box-sizing: border-box;
 }
 
-html{
-    font-size:16px;
+html {
+    font-size: 16px;
+    background-color: #F1F5E0;
 }
 
 html,
-button{
+button {
     font-family: "Quicksand", "sans-serif";
 }
 
-body{
+body {
     margin: 0;
 }
 
-a{
+a {
     text-decoration: none;
 }

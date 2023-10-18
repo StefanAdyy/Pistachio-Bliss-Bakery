@@ -17,10 +17,11 @@ li a {
     flex-direction: column;
     overflow: hidden;
     color: #7a8a2e;
+    background-color: white;
 }
 
 li a:hover {
-    opacity: 0.9;
+    opacity: 0.8;
     cursor: pointer;
 }
 
