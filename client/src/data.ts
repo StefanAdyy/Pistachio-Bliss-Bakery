@@ -54,7 +54,7 @@ export const sample_foods: Food[] = [
   },
 ];
 
-const sample_tags: Tag[] = [
+export const sample_tags: Tag[] = [
   { name: 'All', count: 5 },
   { name: 'Pastry', count: 3 },
   { name: 'Dessert', count: 3 },
