@@ -10,19 +10,21 @@ ul {
 li a {
     height: 21.5rem;
     width: 20rem;
-    border: 1px solid whitesmoke;
-    border-radius: 1rem;
+    border: none;
+    border-radius: 0.3rem;
     margin: 0.5rem;
     display: flex;
     flex-direction: column;
     overflow: hidden;
     color: #7a8a2e;
-    background-color: white;
+    background-color: #CFDB94;
+    transition: transform 0.2s, opacity 0.2s;
 }
 
 li a:hover {
     opacity: 0.8;
     cursor: pointer;
+    transform: scale(1.03);
 }
 
 li a img {
@@ -38,15 +40,16 @@ li a img {
 }
 
 .favorite {
+    border-radius: 3rem;
     position: absolute;
     top: 0.5rem;
     right: 1rem;
     font-size: 1.2rem;
-    color: #889933;
+    color: #5F6B24;
 }
 
 .favorite.not {
-    color: rgb(194, 194, 194);
+    color: rgb(255, 255, 255);
 }
 
 .product-item-footer {
@@ -61,7 +64,7 @@ li a img {
 
 .origins span {
     border-radius: 2rem;
-    background-color: whitesmoke;
+    background-color: #F1F5E0;
     display: inline-block;
     font-size: 0.8rem;
     color: grey;
@@ -81,7 +84,7 @@ li a img {
     position: absolute;
     bottom: 0.5rem;
     left: 0.9rem;
-    background: white;
+    background: #CFDB94;
     padding: 0rem 100% 0.2rem 0.2rem;
     color: #414141;
     margin-top: 0.1rem;

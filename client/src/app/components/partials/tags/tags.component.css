@@ -7,13 +7,15 @@ div {
 div a {
     background-color: #f8faf0;
     padding: 0.3rem 1rem;
-    margin: 0.2rem 0.15rem;
+    margin: 0.2rem 0.35rem;
     border-radius: 10rem;
     font-weight: 600;
     color: #7A8A2E;
     opacity: 1;
+    transition: transform 0.2s, opacity 0.2s;
 }
 
 div a:hover {
     opacity: 0.8;
+    transform: scale(1.1);
 }
