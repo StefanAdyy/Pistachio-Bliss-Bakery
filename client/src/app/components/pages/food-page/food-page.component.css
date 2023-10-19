@@ -105,7 +105,7 @@ img {
 }
 
 .price::before {
-    content: "Price: ";
+    content: "Preț: ";
     color: rgb(83, 83, 83);
     justify-content: center;
 }

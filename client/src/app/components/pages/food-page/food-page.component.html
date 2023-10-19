@@ -23,16 +23,16 @@
 
         <div class="preparation-time">
             <span>
-                Time to prepare about <strong> {{food.preparationTime}} </strong> minutes
+                Timp de pregătire <strong> {{food.preparationTime}} </strong> minute
             </span>
         </div>
 
         <div class="price">
             <span>
-                {{food.price | currency}}
+                {{food.price | number:'1.2-2' }} Lei
             </span>
         </div>
 
-        <button>Add to cart</button>
+        <button>Adaugă în Coș</button>
     </div>
 </div>

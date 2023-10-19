@@ -17,7 +17,7 @@ li a {
     flex-direction: column;
     overflow: hidden;
     color: #7a8a2e;
-    background-color: #CFDB94;
+    background-color: #E3EBC1;
     transition: transform 0.2s, opacity 0.2s;
 }
 
@@ -84,9 +84,15 @@ li a img {
     position: absolute;
     bottom: 0.5rem;
     left: 0.9rem;
-    background: #CFDB94;
+    background: #E3EBC1;
     padding: 0rem 100% 0.2rem 0.2rem;
     color: #414141;
     margin-top: 0.1rem;
-    font-size: 1.1rem
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+}
+
+.currency {
+    margin-left: 0.2rem;
 }

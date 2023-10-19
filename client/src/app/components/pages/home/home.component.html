@@ -22,9 +22,7 @@
           </div>
 
           <div class="price">
-            <span>
-              {{food.price | currency}}
-            </span>
+            {{food.price | number:'1.2-2'}} <span class="currency">Lei</span>
           </div>
         </div>
       </div>
