@@ -6,5 +6,5 @@ export class Food {
   favorite!: boolean;
   imageUrl!: string;
   origins!: string[];
-  cookTime!: string;
+  preparationTime!: string;
 }

@@ -5,7 +5,7 @@ export const sample_foods: Food[] = [
   {
     id: '1',
     name: 'Pistachio Croissant',
-    cookTime: '15-20',
+    preparationTime: '15-20',
     price: 3.5,
     favorite: true,
     origins: ['France'],
@@ -15,7 +15,7 @@ export const sample_foods: Food[] = [
   {
     id: '2',
     name: 'Pistachio Eclair',
-    cookTime: '20-25',
+    preparationTime: '20-25',
     price: 4.00,
     favorite: true,
     origins: ['France'],
@@ -25,7 +25,7 @@ export const sample_foods: Food[] = [
   {
     id: '3',
     name: 'Pistachio Muffin',
-    cookTime: '20-25',
+    preparationTime: '20-25',
     price: 2.0,
     favorite: false,
     origins: ['United States'],
@@ -35,7 +35,7 @@ export const sample_foods: Food[] = [
   {
     id: '4',
     name: 'Pistachio Gelato',
-    cookTime: '10-15',
+    preparationTime: '10-15',
     price: 4.5,
     favorite: true,
     origins: ['Italy'],
@@ -45,7 +45,7 @@ export const sample_foods: Food[] = [
   {
     id: '5',
     name: 'Pistachio Choux',
-    cookTime: '20-25',
+    preparationTime: '20-25',
     price: 3.75,
     favorite: true,
     origins: ['France'],

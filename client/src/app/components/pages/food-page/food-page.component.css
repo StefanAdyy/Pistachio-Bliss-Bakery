@@ -1,0 +1,121 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 3rem;
+}
+
+.container>* {
+    min-width: 25rem;
+    max-width: 40rem;
+}
+
+img {
+    border-radius: 3rem;
+    flex: 1 0;
+    object-fit: cover;
+    height: 35rem;
+    margin: 1rem;
+}
+
+.details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1 0;
+    padding: 2rem;
+    color: #5F6B24;
+    margin-left: 1rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.name {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.favorite {
+    color: #889933;
+    font-size: 2.5rem;
+}
+
+.favorite.not {
+    color: rgb(194, 194, 194);
+    ;
+}
+
+.origins {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+}
+
+.origins span {
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    margin: 0.5rem 0.5rem 0.5rem 0;
+    border-radius: 2rem;
+    background-color: #FDFFF7;
+    color: grey;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tags a {
+    background-color: #FDFFF7;
+    padding: 0.3rem 1rem;
+    margin: 0.2rem 0.15rem;
+    border-radius: 10rem;
+    font-weight: 600;
+    color: #7A8A2E;
+    opacity: 1;
+}
+
+.tags a:hover {
+    opacity: 0.8;
+}
+
+.preparation-time {
+    margin-top: 2rem;
+}
+
+.preparation-time span {
+    padding: 0.6rem 2rem 0.6rem 0;
+    border-radius: 10rem;
+    font-size: 1.3rem;
+}
+
+.price {
+    font-size: 1.8rem;
+    margin: 2rem 2rem 2rem 0;
+    color: #7A8A2E;
+}
+
+.price::before {
+    content: "Price: ";
+    color: rgb(83, 83, 83);
+}
+
+button {
+    background-color: #ADC247;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    padding: 1rem;
+    border-radius: 10rem;
+    outline: none;
+    opacity: 0.8;
+}
+
+button:hover {
+    opacity: 1;
+    cursor: pointer;
+}
