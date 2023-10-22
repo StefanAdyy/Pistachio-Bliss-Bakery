@@ -24,7 +24,7 @@ ul li {
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    border-bottom: 1px solid #ADC247;
+    border-bottom: 1px solid #E3EBC1;
 }
 
 ul li div a {
@@ -40,6 +40,7 @@ li img {
     width: 6rem;
     height: 6rem;
     border-radius: 0.3rem;
+    box-shadow: 0 0 10px rgba(122, 138, 46, 0.6);
     object-fit: cover;
 }
 
@@ -150,9 +151,11 @@ li .remove-button:hover {
     text-align: center;
     opacity: 0.7;
     justify-self: center;
+    transition: transform 0.2s, opacity 0.2s;
 }
 
 .checkout a:hover {
     opacity: 1;
     cursor: pointer;
+    transform: scale(1.03);
 }
