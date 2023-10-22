@@ -19,6 +19,7 @@ li a {
     color: #7a8a2e;
     background-color: #E3EBC1;
     transition: transform 0.2s, opacity 0.2s;
+    box-shadow: 0 0 7px rgba(122, 138, 46, 0.6);
 }
 
 li a:hover {

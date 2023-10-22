@@ -43,13 +43,12 @@ img {
 }
 
 .favorite {
-    color: #889933;
+    color: #5F6B24;
     font-size: 2.5rem;
 }
 
 .favorite.not {
-    color: rgb(194, 194, 194);
-    ;
+    color: rgb(255, 255, 255);
 }
 
 .origins {
@@ -81,6 +80,7 @@ img {
     color: #7A8A2E;
     opacity: 1;
     transition: transform 0.2s, opacity 0.2s;
+    box-shadow: 0 0 4px rgba(122, 138, 46, 0.6);
 }
 
 .tags a:hover {
@@ -116,7 +116,7 @@ button {
     border: none;
     font-size: 1.2rem;
     padding: 1rem;
-    border-radius: 10rem;
+    border-radius: 0.6rem;
     outline: none;
     opacity: 0.8;
     transition: transform 0.2s, opacity 0.2s;
