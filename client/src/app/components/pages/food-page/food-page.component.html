@@ -1,0 +1,41 @@
+<app-not-found [visible]="!food.id" notFoundMessage="Produsul nu a fost găsit!"
+    resetLinkText="Inapoi la pagina principală">
+</app-not-found>
+<div *ngIf="food.id" class="container">
+    <img [src]="food.imageUrl" [alt]="food.name">
+
+    <div class="details">
+        <div class="header">
+            <span class="name">
+                {{food.name}}
+            </span>
+            <span class="favorite {{food.favorite? '':'not'}}">❤</span>
+        </div>
+
+        <div class="origins">
+            <span *ngFor="let origin of food.origins">
+                {{origin}}
+            </span>
+        </div>
+
+        <div class="tags">
+            <a *ngFor="let tag of food.tags" routerLink="/tag/{{tag}}">
+                {{tag}}
+            </a>
+        </div>
+
+        <div class="preparation-time">
+            <span>
+                Timp de pregătire <strong> {{food.preparationTime}} </strong> minute
+            </span>
+        </div>
+
+        <div class="price">
+            <span>
+                {{food.price | number:'1.2-2' }} Lei
+            </span>
+        </div>
+
+        <button (click)="addToCart()">Adaugă în Coș</button>
+    </div>
+</div>

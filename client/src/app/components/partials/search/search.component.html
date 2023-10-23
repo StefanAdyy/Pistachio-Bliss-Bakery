@@ -1,0 +1,5 @@
+<div>
+    <input #s type="text" placeholder="Explorează lumea fisticului..." (keydown.enter)="search(s.value)"
+        [value]="searchTerm">
+    <button (click)="search(s.value)">Caută</button>
+</div>

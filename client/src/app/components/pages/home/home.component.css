@@ -1,0 +1,99 @@
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+}
+
+li a {
+    height: 21.5rem;
+    width: 20rem;
+    border: none;
+    border-radius: 0.3rem;
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    color: #7a8a2e;
+    background-color: #E3EBC1;
+    transition: transform 0.2s, opacity 0.2s;
+    box-shadow: 0 0 7px rgba(122, 138, 46, 0.6);
+}
+
+li a:hover {
+    opacity: 0.8;
+    cursor: pointer;
+    transform: scale(1.03);
+}
+
+li a img {
+    object-fit: cover;
+    height: 14.5rem;
+}
+
+.content {
+    margin-top: 0.3rem;
+    padding: 0.5rem 1rem;
+    position: relative;
+    height: 7rem;
+}
+
+.favorite {
+    border-radius: 3rem;
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    font-size: 1.2rem;
+    color: #5F6B24;
+}
+
+.favorite.not {
+    color: rgb(255, 255, 255);
+}
+
+.product-item-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.origins {
+    flex: 9;
+}
+
+.origins span {
+    border-radius: 2rem;
+    background-color: #F1F5E0;
+    display: inline-block;
+    font-size: 0.8rem;
+    color: grey;
+    margin-right: 0.3rem;
+    padding: 0 0.5rem;
+    margin-top: 0.7rem;
+}
+
+.preparation-time {
+    font-size: 0.9rem;
+    flex: 3;
+    text-align: right;
+    margin-top: 0.7rem;
+}
+
+.price {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0.9rem;
+    background: #E3EBC1;
+    padding: 0rem 100% 0.2rem 0.2rem;
+    color: #414141;
+    margin-top: 0.1rem;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+}
+
+.currency {
+    margin-left: 0.2rem;
+}

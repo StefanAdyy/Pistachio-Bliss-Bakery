@@ -1,0 +1,25 @@
+<header>
+    <div class="container">
+        <a routerLink="/" class="logo">Pistachio Bliss Bakery</a>
+        <nav>
+            <ul>
+                <li>
+                    <a routerLink="/login">Login</a>
+                </li>
+                <li class="menu-container">
+                    <a routerLink="/dashboard">Contul meu</a>
+                    <div class="menu">
+                        <a routerLink="/profile">Profilul meu</a>
+                        <a routerLink="/orders">Comenzi</a>
+                        <a>Logout</a>
+                    </div>
+                </li>
+                <li>
+                    <a routerLink="/cart-page">
+                        Coșul meu <span *ngIf="cartQuantity">{{cartQuantity}}</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
