@@ -3,28 +3,12 @@
         <app-title title="Login"></app-title>
 
         <form [formGroup]="loginForm" (ngSubmit)="submit()">
-            <div class="input-container">
-                <label>Email</label>
-                <div>
-                    <input type="email" placeholder="Email" formControlName="email" />
-                </div>
-                <div class="error-list" *ngIf="fc.email.errors && isSubmitted">
-                    <div *ngif="fc.email.errors.required">Acest camp este obligatoriu</div>
-                    <div *ngif="fc.email.errors.email">Formatul adresei de e-mail nu este corect</div>
-                </div>
-            </div>
-            <div class="input-container">
-                <label>Parola</label>
-                <div>
-                    <input type="password" placeholder="Parola" formControlName="password" />
-                </div>
-                <div class="error-list" *ngIf="fc.password.errors && isSubmitted">
-                    <div *ngif="fc.password.errors.required">Acest camp este obligatoriu</div>
-                </div>
-            </div>
-            <div class="button">
-                <button type="submit">Login</button>
-            </div>
+
+            <text-input [control]="fc.email" [showErrorsWhen]="isSubmitted" type="email" label="Email"></text-input>
+            <text-input [control]="fc.password" [showErrorsWhen]="isSubmitted" type="password"
+                label="Parola"></text-input>
+
+            <default-button text="Intra in cont"></default-button>
         </form>
     </div>
 </div>
