@@ -3,15 +3,15 @@
         <a routerLink="/" class="logo">Pistachio Bliss Bakery</a>
         <nav>
             <ul>
-                <li>
+                <li *ngIf="!isAuthenticated">
                     <a routerLink="/login">Login</a>
                 </li>
-                <li class="menu-container">
-                    <a routerLink="/dashboard">Contul meu</a>
+                <li *ngIf="isAuthenticated" class="menu-container">
+                    <a routerLink="/dashboard">{{user.name}}</a>
                     <div class="menu">
                         <a routerLink="/profile">Profilul meu</a>
                         <a routerLink="/orders">Comenzi</a>
-                        <a>Logout</a>
+                        <a (click)="logout()">Logout</a>
                     </div>
                 </li>
                 <li>
