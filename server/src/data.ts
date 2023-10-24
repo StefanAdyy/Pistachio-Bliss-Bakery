@@ -90,3 +90,20 @@ export const sample_tags: any[] = [
   { name: 'Cofetărie', count: 3 },
   { name: 'Inghețată', count: 1 },
 ]
+
+export const sample_users: any[] = [
+  {
+    name: "Stefan Morariu",
+    email: "stefan@yahoo.com",
+    password: "12345",
+    adderss: "Brasov",
+    isAdmin: true
+  },
+  {
+    name: "Alexandru Marian",
+    email: "alex@yahoo.com",
+    password: "123",
+    adderss: "Bucuresti",
+    isAdmin: false
+  },
+];
