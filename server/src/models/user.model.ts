@@ -3,10 +3,9 @@ import { Schema, model } from "mongoose";
 export interface User {
     id: string;
     email: string;
-    name: string;
     password: string;
+    name: string;
     address: string;
-    token: string;
     isAdmin: boolean;
 }
 
@@ -26,4 +25,4 @@ export const UserSchema = new Schema<User>({
     }
 });
 
-export const USerModel = model<User>('user', UserSchema);
+export const UserModel = model<User>('user', UserSchema);

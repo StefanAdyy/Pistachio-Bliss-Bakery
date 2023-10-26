@@ -1,7 +1,6 @@
 
 export const sample_foods: any[] = [
   {
-    id: '1',
     name: 'Croissant cu Fistic',
     preparationTime: '15-20',
     price: 15,
@@ -11,7 +10,6 @@ export const sample_foods: any[] = [
     tags: ['Patiserie', 'Mic dejun'],
   },
   {
-    id: '2',
     name: 'Ecler cu Fistic',
     preparationTime: '20-25',
     price: 16.50,
@@ -21,7 +19,6 @@ export const sample_foods: any[] = [
     tags: ['Patiserie', 'Desert'],
   },
   {
-    id: '3',
     name: 'Brioșă cu Fistic',
     preparationTime: '20-25',
     price: 9,
@@ -31,7 +28,6 @@ export const sample_foods: any[] = [
     tags: ['Cofetărie', 'Mic dejun'],
   },
   {
-    id: '4',
     name: 'Inghețată cu Fistic',
     preparationTime: '10-15',
     price: 17.5,
@@ -41,7 +37,6 @@ export const sample_foods: any[] = [
     tags: ['Desert', 'Inghețată'],
   },
   {
-    id: '5',
     name: 'Choux cu Fistic',
     preparationTime: '20-25',
     price: 18.99,
@@ -51,7 +46,6 @@ export const sample_foods: any[] = [
     tags: ['Patiserie', 'Desert'],
   },
   {
-    id: '6',
     name: 'Cheesecake cu Fistic',
     preparationTime: '25-30',
     price: 20.50,
@@ -61,7 +55,6 @@ export const sample_foods: any[] = [
     tags: ['Cofetărie', 'Desert'],
   },
   {
-    id: '7',
     name: 'Macaron cu Fistic',
     preparationTime: '15-20',
     price: 12.50,
@@ -71,7 +64,6 @@ export const sample_foods: any[] = [
     tags: ['Patiserie', 'Desert'],
   },
   {
-    id: '8',
     name: 'Tort cu Fistic',
     preparationTime: '35-40',
     price: 24.99,
@@ -96,14 +88,14 @@ export const sample_users: any[] = [
     name: "Stefan Morariu",
     email: "stefan@yahoo.com",
     password: "12345",
-    adderss: "Brasov",
+    address: "Brasov",
     isAdmin: true
   },
   {
     name: "Alexandru Marian",
     email: "alex@yahoo.com",
     password: "123",
-    adderss: "Bucuresti",
+    address: "Bucuresti",
     isAdmin: false
   },
 ];
