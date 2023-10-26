@@ -1,8 +1,13 @@
+import dotenv from 'dotenv';
+dotenv.config();
+
 import express, { response } from "express";
 import cors from "cors";
-import { sample_foods, sample_tags, sample_users } from "./data";
-import jwt from "jsonwebtoken";
 import foodRouter from './routers/food.router';
+import userRouter from './routers/user.router';
+import { dbConnect } from './configs/database.config';
+
+dbConnect();
 
 const app = express();
 app.use(express.json());
@@ -13,30 +18,7 @@ app.use(cors({
 }));
 
 app.use("/api/foods", foodRouter);
-
-app.post("/api/users/login", (req, res) => {
-    const { email, password } = req.body; //destructurin assignment
-    const user = sample_users.find(user => user.email === email &&
-        user.password === password);
-
-    if (user) {
-        res.send(generateTokenResponse(user));
-    }
-    else {
-        res.status(400).send("Adresa de e-mail sau parola sunt invalide!");
-    }
-});
-
-const generateTokenResponse = (user: any) => {
-    const token = jwt.sign({
-        email: user.email, isAdmin: user.isAdmin
-    }, "Text random", {
-        expiresIn: "30d"
-    });
-
-    user.token = token;
-    return user;
-}
+app.use("/api/users", userRouter);
 
 const port = 5000;
 
