@@ -11,7 +11,7 @@ export class DefaultButtonComponent {
   @Input()
   text: string = 'Continua';
   @Input()
-  bgColor = '#e72929';
+  bgColor = '#ADC247';
   @Input()
   color = 'white';
   @Input()
