@@ -27,6 +27,6 @@ export class HeaderComponent {
   }
 
   get isAuthenticated() {
-    return this.user.token;
+    return this.user.name;
   }
 }

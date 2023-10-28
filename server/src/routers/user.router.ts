@@ -20,18 +20,19 @@ router.get("/seed", asyncHandler(
     }
 ));
 
-router.post("/login", (req, res) => {
-    const { email, password } = req.body; //destructurin assignment
-    const user = sample_users.find(user => user.email === email &&
-        user.password === password);
+router.post("/login", asyncHandler(
+    async (req, res) => {
+        const { email, password } = req.body; //destructurin assignment
+        const user = await UserModel.findOne({ email, password });
 
-    if (user) {
-        res.send(generateTokenResponse(user));
+        if (user) {
+            res.send(generateTokenResponse(user));
+        }
+        else {
+            res.status(400).send("Adresa de e-mail sau parola sunt invalide!");
+        }
     }
-    else {
-        res.status(400).send("Adresa de e-mail sau parola sunt invalide!");
-    }
-});
+));
 
 const generateTokenResponse = (user: any) => {
     const token = jwt.sign({
