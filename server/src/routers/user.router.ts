@@ -24,10 +24,10 @@ router.get("/seed", asyncHandler(
 
 router.post("/login", asyncHandler(
     async (req, res) => {
-        const { email, password } = req.body; //destructurin assignment
-        const user = await UserModel.findOne({ email, password });
+        const { email, password } = req.body; //destructuring assignment
+        const user = await UserModel.findOne({ email });
 
-        if (user) {
+        if (user && (await bcrypt.compare(password, user.password))) {
             res.send(generateTokenResponse(user));
         }
         else {
@@ -43,23 +43,22 @@ router.post('/register', asyncHandler(
 
         if (user) {
             res.status(HTTP_BAD_REQUEST)
-                .send('Utilizatorul exista deja, conecteaza-te!');
+                .send('Uitilizatorul exista deja!');
             return;
         }
 
         const encryptedPassword = await bcrypt.hash(password, 10);
 
         const newUser: User = {
-            id: '',
+            id: null,
             name,
-            email: email.toLoweCase(),
+            email: email.toLowerCase(),
             password: encryptedPassword,
             address,
             isAdmin: false
         }
 
         const dbUser = await UserModel.create(newUser);
-
         res.send(generateTokenResponse(dbUser));
     }
 ))
