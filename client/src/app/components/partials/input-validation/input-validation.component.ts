@@ -3,7 +3,9 @@ import { AbstractControl } from '@angular/forms';
 
 const VALIDATORS_MESSAGES: any = {
   required: 'Acest camp este obligatoriu',
-  email: 'Adresa de e-mail e invalida'
+  email: 'Adresa de e-mail e invalida',
+  minlength: 'Valoarea introdusă este prea scurtă',
+  notMatch: 'Parolele nu se potrivesc'
 }
 
 @Component({

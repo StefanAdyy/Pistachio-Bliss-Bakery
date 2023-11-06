@@ -31,13 +31,15 @@ export class UserService {
           )
         },
         error: (errorResponse) => {
-          this.toastrService.error(errorResponse.error, 'Nu te-ai putut conecta!');
+          this.toastrService.error(errorResponse.error, 'Conectarea a eșuat!');
         }
       })
     );
   }
 
   register(userRegister: IUserRegister): Observable<User> {
+    console.log(userRegister);
+
     return this.http.post<User>(USER_REGISTER_URL, userRegister).pipe(
       tap({
         next: (user) => {
@@ -51,6 +53,7 @@ export class UserService {
         error: (errorResponse) => {
           this.toastrService.error(errorResponse.error,
             `Înregistrarea a eșuat!`)
+          console.log(errorResponse.error);
         }
       })
     )
