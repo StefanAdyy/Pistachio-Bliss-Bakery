@@ -9,6 +9,13 @@
                 label="Parola"></text-input>
 
             <default-button text="Intra in cont"></default-button>
+
+            <div class="register">
+                Utilizator nou? &nbsp;
+                <a routerLink="/register" [queryParams]="{returnUrl:returnUrl}">
+                    Creează un cont!
+                </a>
+            </div>
         </form>
     </div>
 </div>
