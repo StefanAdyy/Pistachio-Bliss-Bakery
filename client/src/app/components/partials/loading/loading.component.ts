@@ -6,6 +6,7 @@ import { LoadingService } from 'src/app/services/loading.service';
   templateUrl: './loading.component.html',
   styleUrls: ['./loading.component.css']
 })
+
 export class LoadingComponent {
 
   isLoading!: boolean;
@@ -15,6 +16,6 @@ export class LoadingComponent {
       this.isLoading = isLoading;
     });
 
-    loadingService.showLoading();
+    //loadingService.showLoading();
   }
 }
