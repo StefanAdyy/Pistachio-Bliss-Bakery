@@ -25,3 +25,8 @@ form {
     justify-content: center;
     align-items: center;
 }
+
+
+.title {
+    width: 30rem;
+}
