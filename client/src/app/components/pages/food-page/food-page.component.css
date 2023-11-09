@@ -17,6 +17,7 @@ img {
     object-fit: cover;
     height: 35rem;
     margin: 1rem;
+    box-shadow: 0 0 10px rgba(122, 138, 46, 0.6);
 }
 
 .details {
