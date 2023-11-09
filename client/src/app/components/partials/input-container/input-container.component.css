@@ -17,7 +17,7 @@ label {
 .content {
     padding: 0 0.5rem;
     height: 2.7rem;
-    width: 30rem;
+    width: 100%;
     display: flex;
     align-items: center;
 }
