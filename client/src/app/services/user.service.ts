@@ -66,7 +66,6 @@ export class UserService {
   logout() {
     this.userSubject.next(new User());
     localStorage.removeItem(USER_KEY);
-    window.location.reload(); // facem reload ca atunci cand esti pe o pagina unde e necesar un cont (Cos) sa nu ramana acolo 
   }
 
   private setUserToLocalStorage(user: User) {
