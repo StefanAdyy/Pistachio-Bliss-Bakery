@@ -1,0 +1,10 @@
+<div class="container">
+    <div class="content">
+        <app-title title="Comanda" fontSize="1.6rem"></app-title>
+        <form [formGroup]="checkoutForm">
+            <text-input [control]="fc.name" label="Nume"></text-input>
+            <text-input [control]="fc.address" label="Adresa"></text-input>
+        </form>
+        <app-order-items-list [order]="order"></app-order-items-list>
+    </div>
+</div>
