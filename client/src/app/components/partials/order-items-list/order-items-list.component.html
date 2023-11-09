@@ -1,7 +1,7 @@
 <table>
     <tr>
         <td colspan="5">
-            <h3>Produse Comandate:</h3>
+            <h3>Produse comandate:</h3>
         </td>
     </tr>
     <tr *ngFor="let item of order.items">
@@ -26,14 +26,14 @@
     <tr>
         <td colspan="3"></td>
         <td>
-            <strong>
+            <div class="total">
                 Total:
-            </strong>
+            </div>
         </td>
         <td>
-            <strong>
+            <div class="price">
                 {{order.totalPrice | number:'1.2-2' }} Lei
-            </strong>
+            </div>
         </td>
     </tr>
 </table>
