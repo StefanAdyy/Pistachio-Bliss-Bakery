@@ -70,8 +70,12 @@ const generateTokenResponse = (user: any) => {
         expiresIn: "30d"
     });
 
-    user.token = token;
-    return user;
+    const response = {
+        ...user.toObject(),
+        token: token
+    };
+
+    return response;
 }
 
 export default router;
