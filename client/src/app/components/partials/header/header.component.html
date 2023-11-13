@@ -14,7 +14,7 @@
                         <a (click)="logout()">Logout</a>
                     </div>
                 </li>
-                <li *ngIf="user.id!=null">
+                <li>
                     <a routerLink="/cart-page">
                         Coșul meu <span *ngIf="cartQuantity">{{cartQuantity}}</span>
                     </a>
