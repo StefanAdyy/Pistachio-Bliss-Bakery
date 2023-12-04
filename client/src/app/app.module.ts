@@ -26,7 +26,6 @@ import { CheckoutPageComponent } from './components/pages/checkout-page/checkout
 import { OrderItemsListComponent } from './components/partials/order-items-list/order-items-list.component';
 import { AuthInterceptor } from './auth/auth.interceptor';
 import { PaymentPageComponent } from './components/pages/payment-page/payment-page.component';
-import { PayButtonComponent } from './components/partials/pay-button/pay-button.component';
 import { PaypalButtonComponent } from './components/partials/paypal-button/paypal-button.component';
 
 @NgModule({
@@ -50,7 +49,6 @@ import { PaypalButtonComponent } from './components/partials/paypal-button/paypa
     CheckoutPageComponent,
     OrderItemsListComponent,
     PaymentPageComponent,
-    PayButtonComponent,
     PaypalButtonComponent
   ],
   imports: [

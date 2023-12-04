@@ -1,13 +1,13 @@
 <div class="container">
     <div class="content">
-        <app-title title="Sumar Comanda" fontSize="1.6rem"></app-title>
+        <app-title title="Order Summary" fontSize="1.6rem"></app-title>
         <div class="summary">
             <div>
-                <h3>Nume:</h3>
+                <h3>Name:</h3>
                 <span>{{order.name}}</span>
             </div>
             <div>
-                <h3>Adresa:</h3>
+                <h3>Address:</h3>
                 <span>{{order.address}}</span>
             </div>
         </div>
@@ -15,8 +15,9 @@
     </div>
     <div class="buttons-container">
         <div class="buttons">
-            <pay-button [order]="order">
-            </pay-button>
+            <paypal-button [order]="order">
+
+            </paypal-button>
         </div>
     </div>
 </div>
