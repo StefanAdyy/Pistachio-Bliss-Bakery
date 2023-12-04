@@ -7,7 +7,11 @@ import { Order } from 'src/app/shared/models/Order';
   styleUrls: ['./order-items-list.component.css']
 })
 export class OrderItemsListComponent {
+
   @Input()
   order!: Order;
+
+  @Input()
+  currency: string = "Lei";
 
 }
