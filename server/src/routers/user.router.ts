@@ -5,6 +5,7 @@ import jwt from 'jsonwebtoken';
 import { User, UserModel } from '../models/user.model';
 import { HTTP_BAD_REQUEST } from '../constants/http_status';
 import bcrypt from 'bcryptjs';
+import { OrderModel } from '../models/order.model';
 
 const router = Router();
 

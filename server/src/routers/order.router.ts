@@ -28,6 +28,18 @@ router.post('/create',
     })
 )
 
+router.get('/currentUserOrders', asyncHandler(
+    async (req: any, res: any) => {
+        const orders = await getOrdersForCurrentUser(req);
+
+        if (orders) {
+            res.send(orders);
+        } else {
+            res.status(HTTP_BAD_REQUEST).send();
+        }
+    }
+));
+
 router.get('/newOrderForCurrentUser', asyncHandler(async (req: any, res) => {
     const order = await getNewOrderForCurrentUser(req);
 
@@ -63,4 +75,8 @@ export default router;
 
 async function getNewOrderForCurrentUser(req: any) {
     return await OrderModel.findOne({ user: req.user.id, status: OrderStatus.NEW });
+}
+
+async function getOrdersForCurrentUser(req: any) {
+    return await OrderModel.find({ user: req.user.id });
 }
