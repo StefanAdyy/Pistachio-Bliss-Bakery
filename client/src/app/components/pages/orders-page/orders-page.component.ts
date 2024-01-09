@@ -13,7 +13,7 @@ export class OrdersPageComponent {
   orders!: Order[];
   constructor(orderService: OrderService, router: Router) {
     orderService.getCurrentUserOrders().subscribe(orders => {
-      this.orders = orders;
+      this.orders = orders.reverse();
       console.log(this.orders);
     })
 

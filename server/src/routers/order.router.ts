@@ -31,7 +31,6 @@ router.post('/create',
 router.get('/currentUserOrders', asyncHandler(
     async (req: any, res: any) => {
         const orders = await getOrdersForCurrentUser(req);
-
         if (orders) {
             res.send(orders);
         } else {

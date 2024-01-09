@@ -1,60 +1,26 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+
 .container {
     display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    margin: 1.5rem;
+    flex-direction: column;
     margin-top: 1.5rem;
 }
 
-ul {
-    display: flex;
-    flex-direction: column;
-    flex: 3 0;
-    justify-content: space-evenly;
+.order-tab {
     box-shadow: 0 0 10px rgba(122, 138, 46, 0.6);
     background-color: #f8faf0;
-    border-radius: 1rem;
+    border-radius: 0.7rem;
     list-style: none;
     margin: 0.5rem;
     padding: 0;
 }
 
-ul li {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    border-bottom: 1px solid #E3EBC1;
-    opacity: 1;
-    transition: opacity .2s ease-in;
-    -moz-transition: opacity .2s ease-in;
-    -webkit-transition: opacity .2s ease-in;
-    -o-transition: opacity .2s ease-in;
-}
-
-ul li:hover {
+.order-tab:hover {
     opacity: 0.7;
     cursor: pointer;
     transform: scale(1.03);
 }
 
-ul li:last-child {
-    border: none;
-}
-
-li div {
-    padding: 1rem;
-}
-
-li div:not(:first-child) {
-    flex-basis: 18%;
-}
-
-li .price {
-    text-align: center;
-    color: #5F6B24;
-    font-size: 1.5rem;
-}
 
 .total-price {
     color: #5F6B24;
@@ -66,22 +32,8 @@ li .price {
     color: grey;
 }
 
-.total-price::before {
-    content: "Total: ";
-    color: grey;
-}
-
 .a {
-    padding: 1rem;
-    color: white;
-    background: #ADC247;
-    display: block;
-    width: 90%;
-    margin-bottom: 5%;
-    border-radius: 0.6rem;
-    text-align: center;
     opacity: 0.7;
-    justify-self: center;
     transition: transform 0.2s, opacity 0.2s;
 }
 

@@ -2,37 +2,53 @@
 <app-not-found [visible]='!orders || !orders.length' notFoundMessage="Nu ai facut inca nicio comanda!"
     resetLinkText="Inapoi la pagina principală">
 </app-not-found>
-
 <div *ngIf="orders && orders.length" class="container">
-    <ul>
-        <li *ngFor="let order of orders" [routerLink]="['/track',order.id]">
-            <div class="order-number">
-                <div>
-                    Numarul comenzii:&nbsp;
-                    <strong>{{order.id}}</strong>
+    <div class="order-tab p-3" *ngFor="let order of orders" [routerLink]="['/track', order.id]">
+        <div class="row mb-2">
+            <div class="col">
+                <div class="row">
+                    <div class="col">
+                        Numarul comenzii
+                    </div>
+                    <div class="col">
+                        <strong>{{ order.id }}</strong>
+                    </div>
                 </div>
             </div>
-            <div class="created-date">
-                <div>
-                    <strong>
-                        {{formatedDate(order.createdAt)}}
-                    </strong>
+            <div class="col">
+                <div class="row">
+                    <div class="col">
+                        Tipuri de produse
+                    </div>
+                    <div class="col">
+                        <strong>{{ order.items.length }}</strong>
+                    </div>
                 </div>
             </div>
-            <div class="items-number">
-                <div>Produse:&nbsp;
-                    <strong>{{order.items.length}}</strong>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="row">
+                    <div class="col">
+                        Creata la data
+                    </div>
+                    <div class="col">
+                        <strong>{{ formatedDate(order.createdAt) }}</strong>
+                    </div>
                 </div>
             </div>
-            <div class="address">
-                <div>
-                    Adresa:&nbsp;
-                    <strong>{{order.address}}</strong>
+            <div class="col">
+                <div class="row">
+                    <div class="col">
+                        Total
+                    </div>
+                    <div class="col">
+                        <div class="total-price">
+                            {{ order.totalPrice | number:'1.2-2' }} RON
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="total-price">
-                {{order.totalPrice| number:'1.2-2' }} RON
-            </div>
-        </li>
-    </ul>
+        </div>
+    </div>
 </div>
