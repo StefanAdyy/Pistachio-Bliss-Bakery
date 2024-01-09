@@ -1,1 +1,38 @@
-<p>orders-page works!</p>
+<app-title title="Comenzile mele" margin="1.5rem 0 0 2.5rem"></app-title>
+<app-not-found [visible]='!orders || !orders.length' notFoundMessage="Nu ai facut inca nicio comanda!"
+    resetLinkText="Inapoi la pagina principală">
+</app-not-found>
+
+<div *ngIf="orders && orders.length" class="container">
+    <ul>
+        <li *ngFor="let order of orders" [routerLink]="['/track',order.id]">
+            <div class="order-number">
+                <div>
+                    Numarul comenzii:&nbsp;
+                    <strong>{{order.id}}</strong>
+                </div>
+            </div>
+            <div class="created-date">
+                <div>
+                    <strong>
+                        {{formatedDate(order.createdAt)}}
+                    </strong>
+                </div>
+            </div>
+            <div class="items-number">
+                <div>Produse:&nbsp;
+                    <strong>{{order.items.length}}</strong>
+                </div>
+            </div>
+            <div class="address">
+                <div>
+                    Adresa:&nbsp;
+                    <strong>{{order.address}}</strong>
+                </div>
+            </div>
+            <div class="total-price">
+                {{order.totalPrice| number:'1.2-2' }} RON
+            </div>
+        </li>
+    </ul>
+</div>

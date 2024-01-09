@@ -28,6 +28,10 @@ export class HeaderComponent {
     this.router.navigateByUrl('');
   }
 
+  currentUsersOrders() {
+    this.router.navigateByUrl('/currentUserOrders');
+  }
+
   get isAuthenticated() {
     return this.user.token;
   }

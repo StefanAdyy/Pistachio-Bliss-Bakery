@@ -16,5 +16,13 @@ export class OrdersPageComponent {
       this.orders = orders;
       console.log(this.orders);
     })
+
+    //to do: 1) display the orders (use romainan), implement update, delete for orders. 
+    //to do: 2) Update Read Delete pt conturi (la admin mai apare un buton si doar el poate face asta)
+    //to do: 3) Aplicatie android
+  }
+
+  formatedDate(date: string): string {
+    return date.slice(0, 10);
   }
 }

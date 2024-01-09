@@ -10,7 +10,7 @@
                     <a routerLink="/dashboard">{{user.name}}</a>
                     <div class="menu">
                         <a routerLink="/profile">Profilul meu</a>
-                        <a routerLink="/orders">Comenzi</a>
+                        <a (click)="currentUsersOrders()" routerLink="/orders">Comenzi</a>
                         <a (click)="logout()">Logout</a>
                     </div>
                 </li>
